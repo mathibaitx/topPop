@@ -1,0 +1,234 @@
+body {
+    background-color: #EEECEC;
+}
+
+ion-tab-button {
+    --background-focused: #80008B;
+    --color-selected: #80008B;
+}
+
+.header-md::after {
+    background-image: none;
+}
+
+.header-main ion-toolbar {
+    --background: linear-gradient(120deg, rgba(36, 0, 139, 1) 0%, rgba(128, 0, 139, 1) 100%);
+    border-radius: 0 0 24px 24px;
+    min-height: 100px;
+}
+
+.header-main ion-toolbar ion-title {
+    text-align: center;
+    padding: 1em;
+    position: unset;
+}
+
+.header-main img {
+    width: 80px;
+    height: 80px;
+}
+
+.header-main ion-icon {
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+
+page-extension ion-content div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 2em;
+}
+
+page-extension h3 {
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+ion-content {
+    --background: #EEECEC;
+}
+
+h1 {
+    font-weight: bolder;
+    text-align: center;
+    font-size: 2em;
+}
+
+.searchbar-input.sc-ion-searchbar-md,
+.searchbar-input.sc-ion-searchbar-ios {
+    border-radius: 24px;
+    background-color: #d8d8d8;
+    box-shadow: none;
+}
+
+.searchbar-has-value.searchbar-should-show-clear.sc-ion-searchbar-md-h .searchbar-clear-button.sc-ion-searchbar-md, 
+.searchbar-has-value.searchbar-should-show-clear.sc-ion-searchbar-ios-h .searchbar-clear-button.sc-ion-searchbar-ios {
+    display: none;
+}
+
+ion-select {
+    display: inline-flex;
+}
+
+ion-card {
+    border-radius: 24px;
+    padding: 0.5em;
+}
+
+ion-card-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+ion-card img {
+    margin-top: 1em;
+}
+
+ion-card-title {
+    font-size: 1em;
+    font-weight: lighter;
+    text-align: center;
+    padding: 1em 0 1em 0;
+}
+
+ion-card-subtitle {
+    color: black;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+ion-card ion-icon {
+    color: black;
+    font-size: 1.5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.2em;
+}
+
+#addButton {
+    color: black;
+    font-size: 2.5em;
+    position: absolute;
+    bottom: 4px;
+    right: 14px;
+    z-index: 1;
+}
+
+#addButton:active {
+    color: rgb(29, 29, 29);
+}
+
+ion-col>div {
+    position: relative;
+}
+
+ion-button {
+    --background: #80008B;
+}
+
+#div-cartTitle {
+    position: relative;
+}
+
+#div-cartTitle ion-icon {
+    color: #80008B;
+    font-size: 1.2em;
+    padding: 1em;
+    position: absolute;
+    top: -10px;
+    right: 0;
+}
+
+ion-list img {
+    object-fit: contain;
+}
+
+.item .sc-ion-label-md-h,
+.item.sc-ion-label-ios-h,
+.item .sc-ion-label-ios-h {
+    align-items: center;
+    margin-left: 1em;
+    white-space: normal;
+    padding: 1em;
+}
+
+ion-list .sc-ion-label-md-s h3,
+.item .sc-ion-label-ios-h h3 {
+    font-weight: bolder;
+    padding-top: 0.5em;
+}
+
+ion-list div {
+    background-color: #EEECEC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    margin-top: 0.5em;
+}
+
+ion-list div p {
+    color: var(--ion-color-step-600, #666666);
+}
+
+ion-list div span {
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+#div-cartTotal+div {
+    margin: 1em 0 1em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ion-list+div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    border-top: 1px solid black;
+    margin: 1em 1em 0 1em;
+}
+
+ion-list+div span {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+ion-list+div p {
+    color: #666666;
+}
+
+#div-perfilWrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#div-perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#div-perfil ion-icon {
+    font-size: 6em;
+    margin-bottom: 0.5em;
+}
+
+#div-perfil ion-button {
+    width: 100%;
+}
