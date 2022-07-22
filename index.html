@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP POP!</title>
+    <link rel="shortcut icon" href="img/favicon.svg" type="image/x-icon">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module">
+        import { toastController } from 'https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/index.esm.js';
+        window.toastController = toastController;
+    </script>
+</head>
+
+<body>
+
+    <ion-app>
+
+        <ion-nav root="page-main"></ion-nav>
+
+    </ion-app>
+
+    <template id="page-main.html">
+        <ion-tabs>
+            <ion-tab tab="tab-home">
+                <ion-header class="header-main">
+                    <ion-toolbar>
+                        <ion-title><img src="img/logo.svg" alt="logo"></ion-title>
+                        <ion-icon name="person-circle-sharp"></ion-icon>
+                    </ion-toolbar>
+                </ion-header>
+                <ion-content>
+                    <h1>Productos</h1>
+                    <ion-searchbar onkeyup="toySearch()"></ion-searchbar>
+                    <ion-select placeholder="Franquicias">
+                        <ion-select-option>Todos</ion-select-option>
+                    </ion-select>
+                    <div>
+                        <ion-grid>
+                            <ion-row></ion-row>
+                        </ion-grid>
+                    </div>
+                </ion-content>
+            </ion-tab>
+            <ion-tab tab="tab-cart">
+                <ion-header class="header-main">
+                    <ion-toolbar>
+                        <ion-title><img src="img/logo.svg" alt="logo"></ion-title>
+                        <ion-icon name="person-circle-sharp"></ion-icon>
+                    </ion-toolbar>
+                </ion-header>
+                <ion-content>
+                    <div id="div-cartTitle">
+                        <h1>Carrito</h1>
+                        <ion-icon name="trash" onclick="deleteCartToy()"></ion-icon>
+                    </div>
+                    <ion-list></ion-list>
+                    <div id="div-cartTotal"></div>
+                    <div>
+                        <ion-button expand="block" id="button-comprar" onclick="cartButton()">COMPRAR
+                        </ion-button>
+                    </div>
+                </ion-content>
+            </ion-tab>
+            <ion-tab tab="tab-person">
+                <ion-content>
+                    <div id="div-perfilWrapper">
+                        <div id="div-perfil">
+                            <ion-icon name="person-circle-sharp"></ion-icon>
+                            <ion-button>INICIAR SESIÓN</ion-button>
+                            <ion-button>REGISTRARSE</ion-button>
+                        </div>
+                    </div>
+                </ion-content>
+            </ion-tab>
+            <ion-tab-bar slot="bottom">
+                <ion-tab-button tab="tab-home">
+                    <ion-icon name="home-sharp"></ion-icon>
+                </ion-tab-button>
+
+                <ion-tab-button tab="tab-cart">
+                    <ion-icon name="cart-sharp"></ion-icon>
+                </ion-tab-button>
+
+                <ion-tab-button tab="tab-person">
+                    <ion-icon name="person-circle-sharp"></ion-icon>
+                </ion-tab-button>
+            </ion-tab-bar>
+
+        </ion-tabs>
+    </template>
+    <template id="page-extension.html">
+        <ion-header class="header-back">
+            <ion-toolbar>
+                <ion-buttons slot="start">
+                    <ion-back-button></ion-back-button>
+                </ion-buttons>
+            </ion-toolbar>
+        </ion-header>
+        <ion-content></ion-content>
+    </template>
+
+    <script src="capacitor.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
